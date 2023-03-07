@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My API</title>
+</head>
+<body>
+    <div class = "container" style=" display: grid; justify-content: center; text-align: center;">        
+        <h1 style="font-size: 34px;"> Bienvenido Palomitas Time</h1>
+        <p style="font-size: 18px;"> Aqui encontraras la información sobre peliculas y series de Netflix</p>
+        <h2 style="font-size: 26px;"> Top 5 actual</h2>
+        <ul style="font-size: 20px; text-align: start;">
+            <li>{{data[0]['title']}}</li>
+            <li>{{data[1]['title']}}</li>
+            <li>{{data[2]['title']}}</li>
+            <li>{{data[3]['title']}}</li>
+            <li>{{data[4]['title']}}</li>
+        </ul>
+    </div>
+</body>
+</html>
