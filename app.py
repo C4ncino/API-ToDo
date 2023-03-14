@@ -38,14 +38,17 @@ def get_task(id):
 
 def create_task():
     if request.json:
-        task = {
-            'id' : len(tasks) + 1,
-            'name' : request.json['name'],
-            'status' : False
-        }
-        tasks.append(task)
-        save()
-        return jsonify({'tasks' : tasks}), 201
+        if request.json['name'] != '':
+            task = {
+                'id' : len(tasks) + 1,
+                'name' : request.json['name'],
+                'status' : False
+            }
+            tasks.append(task)
+            save()
+            return jsonify({'tasks' : tasks}), 201
+        else:
+            abort(404)
     else:
         abort(404)
 
