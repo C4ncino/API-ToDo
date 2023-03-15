@@ -58,11 +58,10 @@ def update_task(id):
     if request.json:
         this_task = [task for task in tasks if task['id'] == id]
         if this_task:
-
             if request.json.get('name'):
                 this_task[0]['name'] = request.json['name']
             
-            if request.json.get('status'):
+            if request.json.get('status') or not request.json.get('status'):
                 this_task[0]['status'] = request.json['status']
             save()
             return jsonify({'task' : this_task}), 201
@@ -80,7 +79,6 @@ def delete_task(id):
         return jsonify({'tasks' : tasks})
     else:
         abort(404)
-
 
 
 if __name__ == '__main__':

@@ -1,1 +1,1 @@
-[{"id": 1, "name": "Cocinar algo", "status": false}, {"id": 2, "name": "Limpiar la casa", "status": false}, {"id": 3, "name": "Hablar con la familia", "status": false}]
+[{"id": 1, "name": "Cocinar algo", "status": true}, {"id": 2, "name": "Limpiar la casa", "status": false}, {"id": 3, "name": "Hablar con la familia", "status": true}, {"id": 4, "name": "Lavar Ropa Apestosa", "status": false}]
