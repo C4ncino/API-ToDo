@@ -40,7 +40,7 @@ def create_task():
     if request.json:
         if request.json['name'] != '':
             task = {
-                'id' : len(tasks) + 1,
+                'id' : tasks[len(tasks) - 1] + 1,
                 'name' : request.json['name'],
                 'status' : False
             }
